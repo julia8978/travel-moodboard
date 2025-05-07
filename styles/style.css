@@ -1,0 +1,125 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.moodboard {
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 0 10px;
+    font-family: 'Dancing Script', Arial, sans-serif;
+    font-size: 3vw;
+}
+
+.item {
+    margin: 0 10px 10px 0;
+    flex: 1 1 calc((100% - 3 * 10px) / 3);
+    height: calc((100vw - 3 * 10px) / 3);
+    position: relative;
+}
+
+.item::before {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(248, 234, 214, 0.349);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    bottom: 5%;
+    z-index: 1;
+}
+
+.item::after {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: calc(50% + 10vw);
+    bottom: 5%;
+    height: 20%;
+    z-index: 1;
+}
+
+.item:nth-child(1)::before {
+    content: "And so the avdenture begins!";
+}
+
+.item:nth-child(2)::before {
+  content: "Above the clouds ";
+} 
+
+.item:nth-child(2)::after {
+    font-family: 'Noto Color Emoji';
+    content: "☁";
+} 
+
+.item:nth-child(3)::before {
+    content: "Buon appetito!";
+}
+
+.item:nth-child(4)::before {
+    content: "Eat gelato at least one a day";
+}
+
+.item:nth-child(5)::before {
+    content: "All Roads Lead to Rome!";
+}
+
+.item:nth-child(6)::before {
+    content: "The perfect place to catch some rays";
+}
+
+.item:nth-child(7)::before {
+    content: "Enjoy panoramic Rome views";
+}
+
+.item:nth-child(8)::before {
+    content: "Rent a car";
+}
+
+.item:nth-child(9)::before {
+    content: "Breakfast with a view";
+}
+
+.item:nth-child(5)::after {
+    width: 15%;
+    height: 15%;
+    background-image: url("../icons/italian-flag.svg");
+    top: -2.5vw;
+    left: -2.5vw;
+}
+
+.item:nth-child(8)::after {
+    width: 30%;
+    height: 30%;
+    background-image: url("../icons/italy-retro-mark.svg");
+    top: 15%;
+    right: 25%;
+    transform: rotate(-17deg);
+}
+
+.item:nth-child(7)::after {
+    width: 50%;
+    height: 50%;
+    background-image: url("../icons/rome-bucket-list-challenge.svg");
+    top: 3%;
+    left: 60%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  
